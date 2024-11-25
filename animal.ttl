@@ -1,0 +1,42 @@
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix lia: <https://w3id.org/>.
+
+lia:
+    a skos:ConceptScheme;
+    dct:description "My wonderful vocabulary."@en;
+    dct:title "Test"@en;
+    vann:preferredNamespaceUri lia:;
+    skos:hasTopConcept lia:0fa2e.
+lia:0fa2e
+    a skos:Concept;
+    skos:definition "Animal"@en;
+    skos:narrower lia:1e596, lia:7ee4b, lia:884cb;
+    skos:prefLabel "Animal"@en;
+    skos:topConceptOf lia: .
+lia:1e596
+    a skos:Concept;
+    skos:broader lia:0fa2e;
+    skos:definition "A wilde animal."@en;
+    skos:inScheme lia:;
+    skos:prefLabel "Foxes"@en.
+lia:7ca7f
+    a skos:Concept;
+    skos:broader lia:7ee4b;
+    skos:definition "A cat with blue fur and green eyes."@en;
+    skos:inScheme lia:;
+    skos:prefLabel "Russian Blue"@en.
+lia:7ee4b
+    a skos:Concept;
+    skos:broader lia:0fa2e;
+    skos:definition "A pet animal."@en;
+    skos:inScheme lia:;
+    skos:narrower lia:7ca7f;
+    skos:prefLabel "Cats"@en.
+lia:884cb
+    a skos:Concept;
+    skos:broader lia:0fa2e;
+    skos:definition "Another pet animal."@en;
+    skos:inScheme lia:;
+    skos:prefLabel "Dogs"@en.
